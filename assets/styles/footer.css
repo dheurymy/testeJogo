@@ -1,0 +1,117 @@
+/* Importa fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Define as variáveis de cor usando :root */
+:root {
+   --corFundo: #ffffff; /* Cor de fundo principal */
+   --corTexto: #000000; /* Cor do texto principal */
+   --corDestaques: #4D87FA; /* Cor para destaques */
+   --corBordas: #3F62E0; /* Cor das bordas */
+   --corAlerta: #eed36a; /* Cor para elementos de alerta */
+   --corHover: #E8C32E; /* Cor quando hover */
+   --corBordaAlerta: #bea40c; /* Cor da borda para alertas */
+}
+
+
+footer {
+   background-color: var(--corAlerta); /* Alteração da cor de fundo aqui */
+   color: var(--corTexto); /* Alteração da cor do texto para preto */
+   text-align: center;
+   padding: 1rem 0;
+   margin-top: auto; /* Coloca o rodapé no final da página */
+   font-family: 'Noto Sans', Arial, sans-serif; /* Definindo a fonte Noto Sans */
+
+   width: 100%;
+   height: 100%;
+}
+
+.footer__content {
+   display: flex;
+   flex-direction: column;
+   align-items: center; /* Corrigido */
+   gap: 10px;
+}
+
+.footer-logo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+   margin-top: 20px;
+}
+
+.footer-logo img {
+   max-width: 100px;
+}
+
+footer a {
+   color: black;
+   text-decoration: none;
+   font-weight: 500;
+   transition: color 0.3s;
+}
+
+footer a:hover {
+   color: lightgray;
+}
+
+.footer__text {
+   font-size: 0.9rem;
+   margin-top: 1px;
+}
+
+.content {
+   margin-top: 20px;
+}
+
+.section {
+   margin-bottom: 20px;
+}
+
+.section > h2 {
+   font-size: 1rem;
+   padding-bottom: 2vh;
+}
+
+.contact-list {
+   
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 2vh;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.contact-item {
+   width: 20vh;
+   max-width: 200px;
+   padding: 10px 15px;
+   border-radius: 5px;
+   border: 2px solid #E8C32E;
+   transition: border-color 0.3s;
+}
+
+.contact-item a {
+   color: black;
+   text-decoration: none;
+   font-weight: 500;
+   transition: color 0.3s;
+}
+
+.contact-item:hover {
+   border-color: #333;
+}
+
+.contact-item a:hover {
+   color: gray;
+}
+
+/* Media queries para telas desktops */
+@media (min-width: 601px) {
+   .contact-list {
+      flex-direction: row;
+   }
+
+}

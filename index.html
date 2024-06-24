@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nome do Jogo</title>
+  <link rel="stylesheet" href="assets/styles/reset.css">
+  <link rel="stylesheet" href="assets/styles/fomulario.css">
+  <link rel="stylesheet" href="assets/styles/footer.css">
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <link rel="stylesheet" href="assets/styles/media-queries.css">
+  <link rel="stylesheet" href="assets/styles/midStyle.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="hamburger">
+        <svg xmlns="http://www.w3.org/2000/svg" class="menuIcon" viewBox="0 0 24 24" fill="none">
+          <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <a href="#" class="logo">Logo</a>
+      <div class="menu">
+        <ul class="navlinks">
+          <li><a href="#ancora01" class="navlinks__link link-active active">Para que serve?</a></li>
+          <li><a href="#ancora02" class="navlinks__link">Como funciona?</a></li>
+          <li><a href="#ancora04" class="navlinks__link">Idealizadores</a></li>
+        </ul>
+        <svg xmlns="http://www.w3.org/2000/svg" class="closeIcon" id="closeMenu" viewBox="0 0 24 24" fill="none">
+          <path d="M19.0005 4.99988L5.00045 18.9999M5.00045 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <a href="#" class="game__start__button">Jogar</a>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="introduction" id="ancora01">
+      <section class="introduction__content">
+        <h4 class="introduction__content__text">Inova Maranhão apresenta...</h4>
+        <h2 class="introduction__content__title">NOME DO JOGO!</h2>
+        <p class="introduction__content__paragraph">
+          Quer aprender como conciliar as contas pra ter mais liberdade financeira? Quer investir em sí mesmo e não sabe como começar? Quer comprar algum patrimônio e não sabe o que deve fazer? O nome do jogo é para você! Aprenda sobre educação financeira jogando com o nome do jogo! 
+          
+        </p>
+        <a href="#ancora03" class="download__game__button">Fazer cadastro no jogo</a>
+      </section>
+      <img src="./assets/images/image.png" alt="Personagem principal do jogo..">
+    </div>
+    <div class="midContent" id="ancora02">
+      <h1 class="midContentTitle">Como funciona?</h1>
+      <p class="midContentLegend">O nome do jogo te leva por três cenários para apresentar conceitos valiosos da educação financeira.</p>
+      <div class="cards">
+        <div class="card">
+          <h2 class="cardNumero">01</h2>
+          <h4 class="cardTitulo">Liberdade Financeira</h4>
+          <p class="cardLegend">
+            Quer aprender como conciliar as contas pra ter mais liberdade financeira? O nome do jogo vai te apresentar conceitos da educação financeira que te ajudarão com isso.
+          </p>
+        </div>
+        <div class="card">
+          <h2 class="cardNumero">02</h2>
+          <h4 class="cardTitulo">Compra de Patrimônio</h4>
+          <p class="cardLegend">Quer comprar algum patrimônio e não sabe o que deve fazer? O nome do jogo vai te ajudar com dicas valiosas para facilitar esse processo muito importante da vida.</p>
+        </div>
+        <div class="card">
+          <h2 class="cardNumero">03</h2>
+          <h4 class="cardTitulo">Investir em Mim Mesmo</h4>
+          <p class="cardLegend">Quer investir em sí mesmo e não sabe como começar? O nome do jogo vai te mostrar os conceitos básicos de como se planejar e como começar a investir em sí mesmo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="formulario" id="ancora03">
+      <div class="formularioHeader">
+        <h1>Pronto para jogar?</h1>
+        <p class="legendaFormulario">
+          Antes de começar, você precisa se cadastrar para poder jogar.
+        </p>
+        <p class="legendaFormularioDestaque corDestaque">
+          * O seu usuário e senha são as informações que você usará no login do jogo.
+        </p>
+      </div>
+      <div class="formularioCorpo">
+        <form action="http://localhost:3000/submit-form" method="post" enctype="application/x-www-form-urlencoded">
+          <div class="inputSimples">
+            <input type="text" name="nomeJogador" placeholder="Nome completo" required>
+          </div>
+          <div class="inputSimples">
+            <input type="email" name="emailJogador" placeholder="Endereço de email" required>
+          </div>
+          <div class="inputSimples">
+            <input type="text" name="usuarioJogador" placeholder="Usuário" required>
+          </div>
+          <div class="inputSimples">
+            <input type="password" name="senhaJogador" placeholder="Senha" required>
+          </div>
+          <div class="grupoInput">
+            <input type="number" name="idadeJogador" placeholder="Sua idade" required>
+            <select name="generoJogador" required>
+              <option value disabled selected>Gênero</option>
+              <option value="generoJogadorFeminino">Feminino</option>
+              <option value="generoJogadorMasculino">Masculino</option>
+              <option value="generoJogadorNaoInformado">Prefiro não informar</option>
+            </select>
+          </div>
+          <div class="inputSimples">
+            <select name="conhecimentoJogador" class="textoLongo" required>
+              <option value disabled selected>Qual seu nível de conhecimento sobre educação financeira?</option>
+              <option value="conhecimentoJogadorNenhum">Não conheço nada sobre educação financeira.</option>
+              <option value="conhecimentoJogadorIniciante">Tenho conhecimentos básicos sobre educação financeira.</option>
+              <option value="conhecimentoJogadorIntermediario">Tenho conhecimentos intermediários sobre educação financeira.</option>
+              <option value="conhecimentoJogadorAvancado">Tenho conhecimentos avançados sobre educação financeira.</option>
+            </select>
+          </div>
+          <div class="inputSimples">
+            <select name="interesseJogador" class="textoLongo" required>
+              <option value disabled selected>Qual sua motivação para aprender sobre finanças pessoais?</option>
+              <option value="interesseJogadorLiberdade">Liberdade financeira.</option>
+              <option value="interesseJogadorPatrimonio">Compra de patrimônio.</option>
+              <option value="interesseJogadorInvestir">Investir em mim mesmo.</option>
+            </select>
+          </div>
+          <div class="grupoTermo">
+            <input type="checkbox" name="termoAssinado" required>
+            <p class="textoSimples">
+              Li e concordo com a <a href="politicaPrivacidade.html" target="_blank" class="corDestaque">Política de Privacidade</a>. Compreendo que meus dados serão coletados e usados para pesquisa científica e para melhorar a experiência educativa do jogo.
+            </p>
+          </div>
+          <div class="grupoInput">
+            <button type="button" class="botaoSwitch">
+              <a href="#">Já tenho cadastro.</a>
+            </button>
+            <button type="submit" class="botaoSubmit">Enviar Cadastro!</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer id="ancora04">
+    <div class="content">
+      <section class="section">
+        <h2 class="tituloFooter">Conheça as pessoas que tornaram esse jogo realidade:</h2>
+        <div class="contact-list">
+          <div class="contact-item">
+            <a href="front.html">Trilha Front-end</a>
+          </div>
+          <div class="contact-item">
+            <a href="back.html">Trilha Back-end</a>
+          </div>
+          <div class="contact-item">
+            <a href="jogos.html">Trilha Jogos</a>
+          </div>
+          <div class="contact-item">
+            <a href="design.html">Trilha UX Design</a>
+          </div>
+          <div class="contact-item">
+            <a href="dados.html">Trilha de Dados</a>
+          </div>
+        </div>
+        <div class="footer-logo">
+          <img src="assets/images/inovaa.png" alt="Logo">
+        </div>
+      </section>
+    </div>
+    <div class="footer__text">
+      <p>&copy; 2024 Inova Maranhão. <br>Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="assets/scripts/script.js"></script>
+</body>
+</html>

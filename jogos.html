@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em Contato - Equipe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3paNdF+KeKp5n4SK9UJO2rOs2Xlw5r" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #BDE59C;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            max-width: 1200px;
+            width: 90%;
+            margin: 20px auto;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .profile {
+            text-align: center;
+            margin: 10px;
+            flex: 1 1 300px;
+        }
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .profile-name {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        .whatsapp-link img {
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #E8D99C;
+            color: black;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: auto;
+            font-family: 'Noto Sans', Arial, sans-serif;
+        }
+        .footer__content {
+            display: flex;
+            flex-direction: column;
+           align-items: center;
+            gap: 10px;
+        }
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-top: 20px;
+        }
+        .footer-logo img {
+            max-width: 100px;
+        }
+        footer a {
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: lightgray;
+        }
+        .footer__text {
+            font-size: 0.9rem;
+            margin-top: 1px;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .contact-list {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .contact-item {
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 2px solid #E8C32E;
+            transition: border-color 0.3s;
+        }
+        .contact-item a {
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .contact-item:hover {
+            border-color: #333;
+        }
+        .contact-item a:hover {
+            color: gray;
+        }
+        @media (max-width: 600px) {
+            .profile img {
+                width: 100px;
+                height: 100px;
+            }
+            .whatsapp-link img {
+                width: 40px;
+                height: 40px;
+            }
+            .profile-name {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Trilha de Jogos</h1>
+        <div class="row">
+            <div class="profile">
+                <img src="assets/images/masculino.png" alt="João Gabriel Maciel">
+                <div class="profile-name">João Gabriel Maciel</div>
+                <a href="https://wa.me/5598988579109" target="_blank" class="whatsapp-link">
+                    <img src="assets/images/whatsapp_icon.png" alt="WhatsApp">
+                </a>
+            </div>
+            <div class="profile">
+                <img src="assets/images/masculino.png" alt="Faustino Neto">
+                <div class="profile-name">Faustino Neto</div>
+                <a href="https://wa.me/5598992312266" target="_blank" class="whatsapp-link">
+                    <img src="assets/images/whatsapp_icon.png" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+        <div class="contact-list">
+            <div class="contact-item">
+                <a href="index.html">Voltar</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="content">
+            <section class="section">
+                <div class="footer-logo">
+                    <img src="assets/images/inovaa.png" alt="Logo">
+                </div>
+            </section>
+        </div>
+        <div class="footer__text">
+            <p>&copy; 2024 Inova Maranhão. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

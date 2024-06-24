@@ -1,0 +1,310 @@
+/* Importa fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Define as variáveis de cor usando :root */
+:root {
+   --corFundo: #ffffff; /* Cor de fundo principal */
+   --corTexto: #000000; /* Cor do texto principal */
+   --corDestaques: #4D87FA; /* Cor para destaques */
+   --corBordas: #3F62E0; /* Cor das bordas */
+   --corAlerta: #eed36a; /* Cor para elementos de alerta */
+   --corHover: #E8C32E; /* Cor quando hover */
+   --corBordaAlerta: #bea40c; /* Cor da borda para alertas */
+}
+
+
+
+
+/* Estilização básica para o corpo do documento */
+body {
+   width: 100%;
+   height: auto;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 2vh;
+  
+
+   font-family: "Noto Sans", sans-serif;
+   font-size: small;
+
+   background-color: var(--corFundo);
+}
+
+/* Estilização para o container principal */
+.container {
+   width: 100%;
+   height: 90%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 2vh;
+}
+
+/* Estilos para texto destacado */
+.corDestaque {
+   color: var(--corDestaques);
+}
+
+/* Estilização para o formulário */
+.formulario {
+   width: 90%;
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 2vh;
+}
+
+.formulario > form {
+   width: 100%;
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5%;
+}
+
+/* Estilização para o cabeçalho do formulário */
+.formularioHeader {
+   width: 100%;
+   height: auto;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 15%;
+}
+
+.formularioHeader > h1 {
+   font-weight: 800;
+   font-size: 9vw;
+   margin-bottom: 5%;
+}
+
+.formularioHeader > p {
+   font-size: 3vw;
+}
+
+.formularioHeader > p.legendaFormularioDestaque {
+   margin-top: 2.5%;
+   font-size: 2.4vw;
+}
+
+/* Estilização para o corpo do formulário */
+.formularioCorpo {
+   height: auto;
+}
+
+/* Estilos para inputs simples */
+.inputSimples {
+   width: 100%;
+   height: 10%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+   margin-bottom: 2.5%;
+}
+
+/* Estilos para grupos de inputs */
+.grupoInput {
+   width: 100%;
+   height: 10%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 5%;
+   
+   margin-bottom: 2.5%;
+   
+}
+
+/* Estilos para o grupo especifico do termo */
+.grupoTermo {
+   width: 100%;
+   height: 15%;
+
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: left;
+   gap: 2.5%;
+
+   font-size: 3vw;
+
+   margin-bottom: 2.5%;
+}
+
+/* Estilos para checkbox dentro do grupo do termo */
+.grupoTermo input[type="checkbox"] {
+   appearance: none;
+   width: 1.5em;
+   height: 1.5em;
+   border: 2px solid var(--corBordas);
+   border-radius: 0.25em;
+   background-color: var(--corFundo);
+   cursor: pointer;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.grupoTermo input[type="checkbox"]:checked::before {
+   content: '\2713';
+   color: var(--corDestaques);
+   font-size: 1em;
+}
+
+.grupoTermo input[type="checkbox"]:focus {
+   outline: none;
+   box-shadow: 0 0 0 2px var(--corDestaques);
+}
+
+/* Estilos para inputs e selects dentro do formulário */
+form > div > input,
+form > div >div >input,
+form > div > select  {
+   width: 100%;
+   height: 100%;
+
+   border: 1px solid var(--corBordas);
+   border-radius: 0.5rem;
+   padding: 3%;
+   background-color: var(--corFundo);
+}
+
+/* Estilos para placeholder nos inputs e selects */
+form > div > input::placeholder,
+form > div > div > input::placeholder,
+form > div > select::placeholder {
+   color: var(--corTexto);
+}
+
+/* Estilos para texto longo dos selects*/
+.textoLongo {
+   font-size: 2.8vw;
+   color: var(--corTexto);
+}
+
+/* Estilos para input dentro do grupo do termo */
+.grupoTermo > input {
+   width: 5%;
+}
+
+/* Estilos para botões de alternância e de cadastro */
+.botaoSwitch,
+.botaoSubmit {
+   width: 47.5%;
+   padding: 2.5%;
+   border: 1px solid var(--corBordas);
+   border-radius: 0.5em;
+   font-size: 4vw;
+   font-weight: 600;
+   cursor: pointer;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.botaoSwitch {
+   border-color: var(--corBordaAlerta);
+   background-color: var(--corFundo);
+}
+
+.botaoSwitch > a {
+   color: var(--corAlerta);
+}
+
+.botaoSubmit {
+   border-color: var(--corDestaques);
+   background-color: var(--corDestaques);
+   color: var(--corFundo);
+}
+
+.botaoSubmit:hover,
+.botaoSubmit:focus {
+   background-color: var(--corBordas);
+}
+
+.botaoSwitch:hover,
+.botaoSwitch:focus,
+.botaoSwitch > a:hover {
+   background-color: var(--corHover);
+   color: var(--corFundo);
+}
+
+/* Media queries para telas de tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+
+   form>div>input,
+   form>div>select {
+      font-size: medium;
+   }
+}
+
+/* Media queries para telas desktops */
+@media (min-width: 901px) {
+  
+
+   .formulario {
+      width: 60%;
+      max-width: 1200px;
+   }
+
+   .formularioHeader > h1 {
+      font-size: 3em;
+      margin-bottom: 3%;
+   }
+   
+   .formularioHeader > p {
+      font-size: 1em;
+      font-weight: 500;
+   }
+   
+   .formularioHeader > p.legendaFormularioDestaque {
+      margin-top: 1.5%;
+      font-size: 0.8em;
+   }
+   
+
+   form>div>input,
+   form>div>div>input,
+   form>div>select {
+
+      padding: 2%;
+
+   }
+
+   .grupoTermo {
+      font-size: 1em;
+      margin-bottom: 5%;
+   }
+
+   .grupoTermo input[type="checkbox"]:checked::before {
+      font-size: 2em;
+   }
+
+   .textoLongo {
+      font-size: 1em;
+      color: var(--corTexto);
+   }
+
+   .botaoSwitch,
+   .botaoSubmit {
+      width: 35%;
+      font-size: 1.2em;
+   }
+
+   
+}

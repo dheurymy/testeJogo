@@ -1,0 +1,117 @@
+/* Importa fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Define as variáveis de cor usando :root */
+:root {
+   --corFundo: #ffffff; /* Cor de fundo principal */
+   --corTexto: #000000; /* Cor do texto principal */
+   --corDestaques: #4D87FA; /* Cor para destaques */
+   --corBordas: #3F62E0; /* Cor das bordas */
+   --corAlerta: #eed36a; /* Cor para elementos de alerta */
+   --corHover: #E8C32E; /* Cor quando hover */
+   --corBordaAlerta: #bea40c; /* Cor da borda para alertas */
+   --corFundoMid: #bbe39c; /* Cor de fundo para a div midContent */
+}
+
+.midContent {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+
+    font-family: "Noto Sans", sans-serif;
+    background-color: var(--corFundoMid);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     
+    padding: 5%;
+}
+
+.midContentTitle {
+    font-weight: 800;
+    font-size: x-large;
+
+    padding: 0 5% 5% 5%;
+
+    
+}
+
+.midContentLegend {
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+
+    padding: 0 5% 5% 5%;
+
+    max-width: 800px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+
+    
+}
+
+.card {
+
+    
+    display: flex;
+    
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+
+    border: 1px solid var(--corFundo);
+    border-radius: 1vh 10vh 1vh 1vh;
+
+    width: 90%;
+    min-width: 300px;
+    max-width: 500px;
+    height: auto;
+
+    padding: 5%;
+
+    background-color: var(--corFundo);
+
+    transition: transform 0.2s ease;
+}
+
+.cardNumero {
+    font-size: xx-large;
+    font-weight: 800;
+    padding-bottom: 2vh;
+}
+
+.cardTitulo{
+    font-size: large;
+    font-weight: 600;
+    padding-bottom: 2vh;
+}
+
+.cardLegend {
+    font-size: 1em;
+    font-weight: 400;
+
+    text-align: left;
+
+}
+
+.card:hover{
+    transform: transLateY(10px)
+}
+
+@media (min-width: 901px) {
+    .midContentTitle {
+        font-size: xx-large;
+    }
+
+    .cards {
+        flex-direction: row;
+    }
+}
