@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //URL de conexão do MongoDB
-const mongoDB = process.env.MONGODB_URL;
+const mongoDB = process.env.MONGODB_URI;
 console.log(mongoDB);
 
 // Função para conectar ao MongoDB usando async/await
